@@ -1,0 +1,158 @@
+*{ /* the asterick is used to select any and all elements in html */
+    margin:0; /* margin is extra space around the element */
+    padding: 0; /* padding is extra space inside the element */
+    font-family: 'Merriweather', serif;
+}
+
+.header{
+    min-height: 310px; /* viewport percentage length */
+    width: 100%;
+    background-image: linear-gradient(#715a45, #715a45); /* a stands for alpha, represents opacity */
+    background-position: center;
+    background-size:cover;
+    position: relative;
+}
+
+nav{
+    display: flex; /* horizontal display style 'a b c d e' */
+    padding: 2% 6%;
+    justify-content: space-between; /* defines how the broser distributes space between and around the elements */
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1; /* equal space? */
+    text-align: right;
+}
+
+.nav-links ul li{ /* apparently you can keep adding elements inside the heirarchy like this and apply css to each */
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li::after{ /* cosmetic elements after interacting with whatever's before */
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s
+} /* somehow this makes a line under each element in nav-link ul li */
+
+/*.nav-links ul li:hover::after{ /* HOVER HOVER HOVER
+    width: 100%;
+} /* white line */
+
+.text-box{
+    width: 50%;
+    color: #fff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 55px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: #fff;
+}
+
+nav .fa{
+    display: none; /*under nav-links, the class is fa fa-times, renders the icons invisible in the full screen display*/
+}
+
+@media(max-width: 700px){ /* phone screen alterations */
+    .text-box h1{
+        font-size: 40px;
+    }
+
+    .text-box p{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+
+    .button {
+        background-color: gray;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #728C69;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2; /* position, items with a larger x-index overlap ones with a smaller */
+        transition: 1s; /* for toggle menu */
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px; /* around the menu items */
+    }
+}
+
+.allArticles{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.row1{ /* with all the courses */
+    margin-top: 5%;
+    display: flex; /* side by side */
+    justify-content: space-between;
+}
+
+.article{
+    flex-basis: 31%; /* size of the initial item in a flex row */
+    background: #66557e;
+    /*background: #728C69;*/
+    border-radius: 20px;
+    margin-bottom: 5%; /* padding at the end of a block of whatever */
+    padding: 80px 12px; /* length width space outside of the text */
+    box-sizing: border-box; /* tells the browser to account for the margin and padding for the element's width and height. elements width = 100px, 100px includes any border/padding */
+}
+
+h2{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+h5{
+    text-align: center;
+    font-weight: 300;
+    margin: 10px 0;
+    color: #fff;
+    padding-top: 10px;
+}
+
+@media(max-width: 700px){
+    .row1{
+        flex-direction: column; /* the options are vertical */
+    }
+}

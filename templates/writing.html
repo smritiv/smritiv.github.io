@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0"> <!-- adaptable to diff screens -->
+        <title> writing </title>
+        <link rel="stylesheet" type = "text/css" href="/static/styles/writing.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header"> <!-- section tag = defines a section -->
+            <nav> <!-- navigation links, for blocks of links -->
+                <img src="/static/images/logo.png"> <!-- 'logo' image redirects to the home page with the href -->
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><form action="/home" method="post">
+                            <button class="button">HOME</button>
+                        </form></li>
+                        <li><form action="/writing" method="post">
+                            <button class="button">WRITING</button>
+                        </form></li>
+                        <li><form action="/reviews" method="post">
+                            <button class="button">REVIEWS</button>
+                        </form></li>
+                        <li><form action="/reports" method="post">
+                            <button class="button">REPORTS</button>
+                        </form></li>
+                        <li><form action="/about" method="post">
+                            <button class="button">ABOUT/CONTACT</button>
+                        </form></li>
+                        <style>
+                            .button{
+                                background-color: #715a45;
+                                border: 2px solid black;
+                                border-color: #715a45;
+                                color: white;
+                                padding: 5px 10px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                            }
+
+                            @media(max-width: 700px){
+                                .button{
+                                    background-color: #728C69;
+                                }
+
+                            }
+                        </style>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <h1>WRITING</h1>
+                <p> awkward poetry, fine stories </p>
+            </div>
+        </section>
+        
+        <section class="allArticles">
+            <div class="row1">
+                <div class="article">
+                    <form action="/ladymid" method="post">
+                        <button class="button1">Lady Midnight</button>
+                    </form>
+                    <h5> a poem mimic, based on Lady Midnight - Cassandra Clare; July 14, 2022</h5>
+                    <style>
+                        .button1{
+                            display: inline-block;
+                            text-decoration: none;
+                            color: #fff;
+                            border: 1px solid #fff;
+                            padding: 12px 34px;
+                            font-size: 20px;
+                            background: transparent;
+                            position: relative;
+                            cursor: pointer;
+                        }
+
+                    </style>
+                </div>
+                <div class="article">
+                    <h2> Day 5 </h2>
+                    <h5> a short story prompt i found somewhere, July 14, 2022</h5>
+                </div>
+                <div class="article">
+                    <h2> to us </h2>
+                    <h5> series of free writing, July 14, 2022</h5>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript for Toggle Menu -->
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px"
+            }
+
+        </script>
+
+    </body>
+</html>

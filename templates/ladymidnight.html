@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0"> <!-- adaptable to diff screens -->
+        <title> writing </title>
+        <link rel="stylesheet" type = "text/css" href="/static/styles/ladymidnight.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header"> <!-- section tag = defines a section -->
+            <nav> <!-- navigation links, for blocks of links -->
+                <img src="/static/images/logo.png"> <!-- 'logo' image redirects to the home page with the href -->
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><form action="/home" method="post">
+                            <button class="button">HOME</button>
+                        </form></li>
+                        <li><form action="/writing" method="post">
+                            <button class="button">WRITING</button>
+                        </form></li>
+                        <li><form action="/reviews" method="post">
+                            <button class="button">REVIEWS</button>
+                        </form></li>
+                        <li><form action="/reports" method="post">
+                            <button class="button">REPORTS</button>
+                        </form></li>
+                        <li><form action="/about" method="post">
+                            <button class="button">ABOUT/CONTACT</button>
+                        </form></li>
+                        <style>
+                            .button{
+                                background-color: #715a45;
+                                border: 2px solid black;
+                                border-color: #715a45;
+                                color: white;
+                                padding: 5px 10px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                            }
+
+                            @media(max-width: 700px){
+                                .button{
+                                    background-color: #728C69;
+                                }
+
+                            }
+                        </style>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </section>
+
+        <section class="article">
+            <h1> Lady Midnight </h1>
+            <h5> july 14, 2022 </h5>
+
+            <p>From the iron years then to the new years now,<br>
+                In a city where all the stories are True:<br>
+               There thrived a simple choice that you may know<br>
+                One that most can never undo-<br>
+               And this choice lived in two bodies<br>
+                Oh! it must have ailed you too–<br>
+               For it was a blessing and it was a curse,<br>
+                In this city where all the stories are True,<br>
+               But it appeared to folk as neither but a rite <br>           
+                The head and its tail too<br>
+               Such a rite that the true Angels of heaven <br>
+                Protected it from wearing through.<br>
+                <br>
+               So it was for this cause that, from then to now<br>
+                In this city where all the stories are True,<br>
+               The people wedged between light and dark:<br>
+                Reaching and the choice they drew;<br>
+               Whether to be engulfed in poor but gold-tinted sight<br>
+                So one may forget about the mildew<br>
+               Or venture into bright lit beaches with hot<br>
+                Sand and no lack of rue.<br>
+                <br>
+               One, for the loss of his love- at the <br>
+                Betrayal from people he thought he knew <br>
+               Yes! it was for this cause (as all the folk know, <br>
+                In this city where all the stories are True) <br>
+               That he chose the cave of charcoal, <br>
+                Renouncing his ability to see hue. <br>
+                <br>
+               Another, out of survival in a city sharp and cunning, <br>
+                Love for a shadow of the past view, <br>
+                Need of protection for their light too, <br>
+               And neither the true Angels of heaven above, <br>
+                Nor the dishonest warriors of compass new <br>
+               Could ever stray him away from the life for him <br>
+                In the dusk where what's said is not True. <br>
+                <br>
+               Others call them inhuman for they left all in ruin <br>
+                Oh! how that is askew- <br>
+               But to the night they are tied by such mortal binds <br>
+                Oh! how that is askew- <br>
+               They tell their lies and pull out their knives <br>
+               For their darlings, their darlings, their lights and their lives, <br>
+                In the cave in the city True– <br>
+                In the dusk in the city True.</p>
+        </section>
+
+    </body>
+</html>
